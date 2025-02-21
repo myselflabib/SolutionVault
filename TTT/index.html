@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { width: 80%; margin: auto; padding: 20px; }
+        h2, h3 { text-align: center; }
+        p, ul { text-align: justify; }
+        ul { margin-left: 20px; }
+        input, select, button { display: block; margin: 10px auto; padding: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hospital Management System</h2>
+        
+        <h3>Introduction</h3>
+        <p>The Hospital Management System (HMS) aims to streamline hospital operations by digitizing patient records, doctor schedules, appointments, and billing. This system ensures efficiency, reducing manual errors and improving service quality.</p>
+        
+        <h3>Modules</h3>
+        <ul>
+            <li><b>Patient Management:</b> Add, edit, delete, view patient records.</li>
+            <li><b>Doctor Management:</b> Add and list doctor profiles, assign doctors to patients.</li>
+            <li><b>Appointment Management:</b> Schedule, view, and cancel appointments.</li>
+            <li><b>Billing System:</b> Generate and store medical bills.</li>
+        </ul>
+
+        <h3>Manage Patients</h3>
+        <input type="text" id="patientName" placeholder="Enter Patient Name">
+        <input type="number" id="patientAge" placeholder="Enter Age">
+        <input type="text" id="patientGender" placeholder="Enter Gender">
+        <input type="text" id="patientDiagnosis" placeholder="Enter Diagnosis">
+        <input type="text" id="patientContact" placeholder="Enter Contact Information">
+        <button onclick="addPatient()">Add Patient</button>
+        <table id="patientTable">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Diagnosis</th>
+                <th>Contact</th>
+            </tr>
+        </table>
+
+        <h3>Manage Doctors</h3>
+        <input type="text" id="doctorName" placeholder="Enter Doctor Name">
+        <input type="text" id="doctorSpecialization" placeholder="Enter Specialization">
+        <button onclick="addDoctor()">Add Doctor</button>
+        <table id="doctorTable">
+            <tr>
+                <th>Name</th>
+                <th>Specialization</th>
+            </tr>
+        </table>
+
+        <h3>Manage Appointments</h3>
+        <input type="text" id="appointmentPatient" placeholder="Patient Name">
+        <input type="text" id="appointmentDoctor" placeholder="Doctor Name">
+        <input type="text" id="appointmentDate" placeholder="Appointment Date (DD/MM/YYYY)">
+        <button onclick="addAppointment()">Schedule Appointment</button>
+        <table id="appointmentTable">
+            <tr>
+                <th>Patient</th>
+                <th>Doctor</th>
+                <th>Date</th>
+            </tr>
+        </table>
+
+        <h3>Billing System</h3>
+        <input type="text" id="billPatient" placeholder="Patient Name">
+        <input type="text" id="billAmount" placeholder="Enter Bill Amount">
+        <button onclick="generateBill()">Generate Bill</button>
+        <table id="billTable">
+            <tr>
+                <th>Patient</th>
+                <th>Amount</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function addPatient() {
+            let name = document.getElementById("patientName").value;
+            let age = document.getElementById("patientAge").value;
+            let gender = document.getElementById("patientGender").value;
+            let diagnosis = document.getElementById("patientDiagnosis").value;
+            let contact = document.getElementById("patientContact").value;
+            if(name && age && gender && diagnosis && contact) {
+                let table = document.getElementById("patientTable");
+                let row = table.insertRow();
+                row.insertCell(0).innerText = name;
+                row.insertCell(1).innerText = age;
+                row.insertCell(2).innerText = gender;
+                row.insertCell(3).innerText = diagnosis;
+                row.insertCell(4).innerText = contact;
+            }
+        }
+
+        function addDoctor() {
+            let name = document.getElementById("doctorName").value;
+            let specialization = document.getElementById("doctorSpecialization").value;
+            if(name && specialization) {
+                let table = document.getElementById("doctorTable");
+                let row = table.insertRow();
+                row.insertCell(0).innerText = name;
+                row.insertCell(1).innerText = specialization;
+            }
+        }
+
+        function addAppointment() {
+            let patient = document.getElementById("appointmentPatient").value;
+            let doctor = document.getElementById("appointmentDoctor").value;
+            let date = document.getElementById("appointmentDate").value;
+            if(patient && doctor && date) {
+                let table = document.getElementById("appointmentTable");
+                let row = table.insertRow();
+                row.insertCell(0).innerText = patient;
+                row.insertCell(1).innerText = doctor;
+                row.insertCell(2).innerText = date;
+            }
+        }
+
+        function generateBill() {
+            let patient = document.getElementById("billPatient").value;
+            let amount = document.getElementById("billAmount").value;
+            if(patient && amount) {
+                let table = document.getElementById("billTable");
+                let row = table.insertRow();
+                row.insertCell(0).innerText = patient;
+                row.insertCell(1).innerText = amount;
+            }
+        }
+    </script>
+</body>
+</html>
