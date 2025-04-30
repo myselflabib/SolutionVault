@@ -2,16 +2,11 @@
 
 int main(){
     float sum = 0, cal = 1, even, odd;
-    for (float i = 1; i <= 40; i++)
+    for (float i = 1, j = 1; i <= 39; i+=2, j*=2)
     {
-        if (i/2==0)
-        {
-            even = i;
-        }
-        else{
-            odd = i;
-        }
         
+            even = j;
+            odd = i;
         cal = odd/even;
         sum += cal;
     }
