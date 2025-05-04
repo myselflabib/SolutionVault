@@ -1,0 +1,1 @@
+{"name":"Local: max_value","url":"/home/labibu/Documents/SolutionVault/PHITRON/DS_PHITRON/PRACTICE_2/max_value.cpp","tests":[{"id":1746293834927,"input":"2 4 1 3 5 4 2 5 -1","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/labibu/Documents/SolutionVault/PHITRON/DS_PHITRON/PRACTICE_2/max_value.cpp","group":"local","local":true}
