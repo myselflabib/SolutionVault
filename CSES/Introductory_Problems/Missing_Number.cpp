@@ -2,23 +2,18 @@
 using namespace std;
 
 int main(){
-    int N;
+    long long int N;
     cin >> N;
-    int A[N];
-    for (int i = 0; i < N-1; i++)
-    {
-        cin >> A[i];
-    }
-    sort(A, A+N);
-    for (int i = 0; i < N-1; i++)
-    {
-        if (A[i+1]!= i)
-        {
-            cout << i << endl;
-        }
-        
+    long long int allSum, withoutSum = 0, Num;
+    
+    allSum = (long long)(N*(N+1))/2;
+    for (int i = 0; i < N-1; i++) {
+        cin >> Num;
+        withoutSum += Num;
     }
     
+    
+    cout << allSum-withoutSum <<endl;
     
     return 0;
 }

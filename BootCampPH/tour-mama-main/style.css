@@ -1,0 +1,165 @@
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(#FFFFFF, #EBDCFF);
+}
+
+*{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    background-color: #872BFF;
+    padding: 16px 32px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.btn-white{
+    padding: 16px 32px;
+    border:2px solid #872BFF;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.heading-content{
+    text-align: center;
+}
+
+.heading-content h4{
+    color: #F411CF;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.heading-content{
+    font-weight: bold;
+    font-size: 44px;
+    margin-bottom: 60px;
+}
+
+#banner{
+    margin: 100px auto 120px auto;
+    border: 2px solid #872BFF10;
+    background-image: url("images/hero-bg.png");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    width: 87.5%;
+    border-radius: 40px;
+}
+
+.banner-content{
+    width: 50%;
+}
+
+.banner-content *{
+    margin-bottom: 20px;
+}
+.banner-content h1{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.banner-content p{
+    font-size: 18px;
+    font-weight: medium;
+    color: #A8A8A8;
+}
+.banner-content h1 span{
+    color: #F411CF;
+}
+
+.banner-img img{
+    width: 600px;
+}
+
+#service, #story, #country, #review{
+    width: 87.5%;
+    margin: 0px auto 120px auto;
+}
+
+#service-card-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-card{
+    background-color: white;
+    padding: 60px;
+    text-align: center;
+    width: 350px;
+    /* height: 450px; */
+    border-radius: 30px;
+}
+.service-card img{
+    margin-bottom: 30px;
+}
+
+.service-card h3{
+    font-weight: semibold;
+    margin-bottom: 30px;
+}
+
+.service-card p{
+    color: #A8A8A8;
+    font-weight: medium;
+}
+
+.story-card{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 24px;
+    padding: 40px;
+    gap: 20px;
+}
+
+.story-content h2, p, img{
+    margin-bottom: 30px;
+}
+
+#country-container-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+#country-container-card h2{
+    background-color: white;
+    padding: 40px;
+}
+
+.review-card-container{
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 60px;
+    border-radius: 24px;
+    
+}
+
+.review-card{
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+    background-image: url("images/star-reviews.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+#footer-container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
