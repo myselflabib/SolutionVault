@@ -1,0 +1,1 @@
+{"name":"Local: selection_sort","url":"/home/labibu/Documents/SolutionVault/PHITRON/DS_PHITRON/REVISED/selection_sort.cpp","tests":[{"id":1752907524132,"input":"6\n5 3 8 4 7 2","output":"2 3 4 5 7 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/labibu/Documents/SolutionVault/PHITRON/DS_PHITRON/REVISED/selection_sort.cpp","group":"local","local":true}
