@@ -4,12 +4,13 @@ using namespace std;
 int main(){
     int k, n, w;
     cin >> k >> n >> w;
-    int bananacost = 0;
+    long long int bananacost = 0;
     for (int i = 1; i <= w; i++)
     {
         bananacost += (k*i);
     }
 
-    cout << bananacost-n << endl;
+    if(bananacost-n<=0) cout << 0 << endl;
+    else cout << bananacost-n << endl;
     return 0;
 }

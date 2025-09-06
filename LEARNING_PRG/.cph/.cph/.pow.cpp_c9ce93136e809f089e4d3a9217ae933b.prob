@@ -1,0 +1,1 @@
+{"name":"Local: pow","url":"/home/labibu/Documents/SolutionVault/LEARNING_PRG/.cph/pow.cpp","tests":[{"id":1756187430890,"input":"10 1","output":"True"},{"id":1756187888096,"input":"10 1001","output":"False"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/labibu/Documents/SolutionVault/LEARNING_PRG/.cph/pow.cpp","group":"local","local":true}

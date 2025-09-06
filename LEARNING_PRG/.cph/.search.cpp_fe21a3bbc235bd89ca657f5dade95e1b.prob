@@ -1,0 +1,1 @@
+{"name":"Local: search","url":"/home/labibu/Documents/SolutionVault/LEARNING_PRG/search.cpp","tests":[{"id":1756092879667,"input":"1 3 5 7 8 2\n5","output":"The number is in 5th index."}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/labibu/Documents/SolutionVault/LEARNING_PRG/search.cpp","group":"local","local":true}
