@@ -1,0 +1,1 @@
+{"name":"Local: queue","url":"/Users/labib/Documents/SolutionVault/PHITRON/DS_PHITRON/MODULE_14/queue.cpp","tests":[{"id":1758821549016,"input":"5\n1 2 3 4 5","output":"1 5 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/labib/Documents/SolutionVault/PHITRON/DS_PHITRON/MODULE_14/queue.cpp","group":"local","local":true}

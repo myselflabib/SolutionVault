@@ -1,0 +1,1 @@
+{"name":"Local: Target_Sum","url":"/Users/labib/Desktop/SolutionVault/PHITRON/DS_PHITRON/MODULE_16/Target_Sum.cpp","tests":[{"id":1759261365449,"input":"8 8\n1 2 3 4 5 8 9 10 13 15","output":"3 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/labib/Desktop/SolutionVault/PHITRON/DS_PHITRON/MODULE_16/Target_Sum.cpp","group":"local","local":true}
