@@ -3,21 +3,21 @@ using namespace std;
 
 int main() {
     int t;
-    cin >> t;   // test case সংখ্যা
+    cin >> t;   
 
     while (t--) {
         int n;
-        cin >> n;   // array এর সাইজ
+        cin >> n;   
 
-        int a[n + 1];   // এখন array বানালাম index = 1 থেকে
+        int a[n + 1];   
         for (int i = 1; i <= n; i++) {
-            cin >> a[i];   // element গুলো ইনপুট নিলাম
+            cin >> a[i];   
         }
 
         bool ok = true;
 
-        // odd index গুলোর parity চেক
-        int odd_parity = a[1] % 2;   // index 1 এর parity
+        
+        int odd_parity = a[1] % 2;   
         for (int i = 1; i <= n; i += 2) {
             if (a[i] % 2 != odd_parity) {
                 ok = false;
@@ -25,9 +25,9 @@ int main() {
             }
         }
 
-        // even index গুলোর parity চেক
-        if (n > 1) {   // যদি কমপক্ষে একটা even index থাকে
-            int even_parity = a[2] % 2;   // index 2 এর parity
+        
+        if (n > 1) {   
+            int even_parity = a[2] % 2;   
             for (int i = 2; i <= n; i += 2) {
                 if (a[i] % 2 != even_parity) {
                     ok = false;

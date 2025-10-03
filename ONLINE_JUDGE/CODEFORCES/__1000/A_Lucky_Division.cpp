@@ -1,6 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool isLucky(int x) {
+    while (x > 0) {
+        int d = x % 10;
+        if (d != 4 && d != 7) return false;
+        x /= 10;
+    }
+    return true;
+}
+
 int main()
 {
     int n;
@@ -8,63 +17,24 @@ int main()
 
     vector<int> lNum;
 
-    for (int i = 1; i <= 1000; i++)
-    {
-        while(i!=0){
-        int temp = i;
-        int num = temp % 10;
-        
-
-        if (num != 4 && num != 7)
-        {
-            break;
-        }
-        else
-        {
-            
-        }
-        temp /= 10;
-    }
-    }
-
-    int flag = 1;
-    int temp = n;
-    while (temp != 0)
-    {
-        int num = temp % 10;
-        temp /= 10;
-
-        if (num != 4 && num != 7)
-        {
-            flag = 0;
-            break;
+    for (int i = 1; i <= 1000; i++) {
+        if (isLucky(i)) {
+            lNum.push_back(i);
         }
     }
 
-    if (flag)
-    {
+    if (isLucky(n)) {
         cout << "YES" << endl;
+        return 0;
     }
 
-    else
-    {
-
-        int ok = 1;
-        for (int i = 1; i <= lNum.size(); i++)
-        {
-            if (n % lNum[i] != 0){
-                ok = 0;
-                break;
-            }
-        }
-        if (ok)
-        {
+    for (int i = 0; i < lNum.size(); i++) {
+        if (n % lNum[i] == 0) {
             cout << "YES" << endl;
-        }
-
-        else{
-        cout << "NO" << endl;
+            return 0;
         }
     }
+
+    cout << "NO" << endl;
     return 0;
 }

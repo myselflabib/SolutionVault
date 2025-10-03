@@ -10,14 +10,13 @@ int main() {
             for(int j = i+1; j <= N; j++) {
                 int a = i, b = j;
 
-                // Euclidean Algorithm দিয়ে GCD বের করা
                 while(b != 0) {
                     int temp = b;
                     b = a % b;
                     a = temp;
                 }
 
-                G += a; // a হলো GCD
+                G += a;
             }
         }
 

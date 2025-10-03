@@ -1,37 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Function to calculate sum of digits
-int digitSum(int n) {
-    int sum = 0;
-    while (n > 0) {
-        sum += n % 10;
-        n /= 10;
+void multiply(vector<int> &num, int x) {
+    int carry = 0;
+    for (int i = 0; i < num.size(); i++) {
+        int prod = num[i] * x + carry;
+        num[i] = prod % 10;
+        carry = prod / 10;
     }
-    return sum;
+    while (carry) {
+        num.push_back(carry % 10);
+        carry /= 10;
+    }
 }
 
+void printBig(vector<int> &num) {
+    for (int i = num.size()-1; i >= 0; i--) cout << num[i];
+    cout << "\n";
+}
 
 int main() {
     int K;
     cin >> K;
 
-    int start = 1;
-    for (int i = 1; i < K; i++) {
-        start *= 10; 
-    }
-    int end = start * 10 - 1; 
-    
-    int count = 0;
-
-    for (int A = start; A <= end; A++) {
-        for (int B = start; B <= end; B++) {
-            if (digitSum(A + B) == digitSum(A) + digitSum(B)) {
-                count++;
-            }
+    int firstCount = 0;
+    for (int a = 1; a <= 9; a++) {
+        for (int b = 1; b <= 9; b++) {
+            if (a + b <= 9) firstCount++;
         }
     }
 
-    cout << count << endl;
+    int otherCount = 0;
+    for (int a = 0; a <= 9; a++) {
+        for (int b = 0; b <= 9; b++) {
+            if (a + b <= 9) otherCount++;
+        }
+    }
+
+    vector<int> result;
+    result.push_back(1); // start with 1
+
+    multiply(result, firstCount);
+    for (int i = 1; i < K; i++) {
+        multiply(result, otherCount);
+    }
+
+    printBig(result);
     return 0;
 }

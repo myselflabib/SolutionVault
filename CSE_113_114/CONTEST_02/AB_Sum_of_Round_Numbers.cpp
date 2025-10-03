@@ -9,7 +9,7 @@ int main() {
         int n;
         cin >> n;
 
-        int arr[5];   // কারণ n ≤ 10000, তাই max 4-5 digit হবে
+        int arr[5];   
         int cnt = 0;
         int pos = 1;
 
@@ -23,7 +23,7 @@ int main() {
         }
 
         cout << cnt << endl;
-        for (int i = 0; i < cnt; i++) {   // ছোট digit আগে প্রিন্ট
+        for (int i = 0; i < cnt; i++) {   
             cout << arr[i] << " ";
         }
         cout << endl;

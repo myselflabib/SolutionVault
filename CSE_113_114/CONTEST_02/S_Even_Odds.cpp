@@ -7,11 +7,10 @@ int main() {
 
     long long odd_count = (n + 1) / 2;
 
-    if(k <= odd_count) {
-        cout << 2*k - 1 << endl; // k-th odd
-    } 
-    else {
-        cout << 2*(k - odd_count) << endl; // k-th even
+    if (k <= odd_count) {
+        cout << 1 + 2 * (k - 1) << endl;
+    } else {
+        cout << 2 * (k - odd_count) << endl;
     }
 
     return 0;
