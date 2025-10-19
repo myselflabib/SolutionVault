@@ -3,7 +3,7 @@ using namespace std;
 
 
 
-int labib();
+int labib(int a, int b);
 int main()
 {
     int a = 10, b= 20;
