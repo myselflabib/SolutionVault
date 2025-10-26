@@ -69,10 +69,35 @@ Node* input_tree(){
     return root;
 }
 
+int count_nodes(Node* root){
+
+    if(root == NULL) 
+        return 0;
+    int l = count_nodes(root->left);
+    int r = count_nodes(root->right);
+
+    return r+l+1;
+}
+
+
+int count_leaf_nodes(Node* root){
+
+    if(root == NULL) 
+        return 0;
+
+    if(root->left == NULL && root->right == NULL)
+        return 1;
+    int l = count_leaf_nodes(root->left);
+    int r = count_leaf_nodes(root->right);
+
+    return r+l;
+}
 
 int main()
 {
     Node* root = input_tree();
-    level_order(root);
+    // level_order(root);
+
+    cout << count_leaf_nodes(root) << endl;
     return 0;
 }
