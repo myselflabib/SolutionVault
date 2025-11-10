@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool cmp(pair<int, int>x, pair<int, int>y){
+bool cmp(pair<long long, long long>x, pair<long long, long long>y){
     if(x.first==y.first){
-        if(x.second<y.second){
+        if(x.second>y.second){
             return true;
         }
         else return false;
@@ -18,19 +18,18 @@ bool cmp(pair<int, int>x, pair<int, int>y){
 int main()
 {
 
+    int t;
+    cin >> t;
+
+    while(t--){
     int n;
     cin >> n;
 
-    vector<pair<int, int>> v(n);
+    vector<pair<long long, long long>> v(n);
 
     for (int i = 0; i < v.size(); i++){
         cin >> v[i].first >> v[i].second;
     }
-
-    // sort(v.begin(), v.end());
-    // sort(v.rbegin(), v.rend());
-
-    // sort(v.begin(), v.end(), greater<pair<int, int>>());
 
     sort(v.begin(), v.end(),cmp);
 
@@ -39,17 +38,7 @@ int main()
     for (int i = 0; i < v.size(); i++){
         cout << v[i].first << " " << v[i].second << endl;
     }
-
-
-    // pair<string, int> info1, info2;
-
-    // cin >> info1.first >> info2.second;
-    // cout << endl;
-    // cin >> info1.first >> info2.second;
-
-    // cout << info1.first << " " << info1.second << endl;
-    // cout << info2.first << " " << info2.second << endl;
-
+}
 
     return 0;
 }
