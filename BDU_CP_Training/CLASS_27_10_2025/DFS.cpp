@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector <int> g[9];
-vector <int> visit(9);
-
+vector <int> g[100];
+vector <int> visit(100);
 
 void dfs(int x){
 
+    
     visit[x] = 1;
-    cout << x << " ";
+    //cout << x << " ";
 
     for(auto j: g[x]){
         if(visit[j] == 0){
@@ -17,8 +17,7 @@ void dfs(int x){
     }
 }
 
-int main()
-{
+int main(){
 
     int n, m;
     cin >> n >> m;
@@ -43,10 +42,25 @@ int main()
     //     cout << endl;
     // }
 
-    dfs(1);
     
+    int count = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        if(visit[i]==0){
+         dfs(i);
+         count++;
+        }
+    }
+    
+    cout << count << endl;
+    // int count = 0;
+    for (int i = 0; i < m; i++){
+        count+=visit[i];
+    }
 
+    if(count == n) cout << "Connected" << endl;
 
+    else cout<< "Not Connected" << endl;
     
     
     return 0;
