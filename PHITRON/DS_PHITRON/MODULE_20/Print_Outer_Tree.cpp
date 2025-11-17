@@ -46,39 +46,38 @@ Node* input_tree(){
     return root;
 }
 
-
-void print_tree(Node* root){
-
-    vector<int> v;
-    if(root==NULL){
-        cout << "No tree" << endl;
+void PrintLeft(Node *root)
+{
+    if (root == NULL) 
         return;
-    }
-    queue<Node*> q;
-    q.push(root);
-    while(!q.empty()){
-        Node* f = q.front();
-        q.pop();
 
+    PrintLeft(root->left);
+    if(root->left == NULL && root->right) 
+        PrintLeft(root->right);
         
-
-        if(f->left){
-            q.push(f->left);
-            v.push_back(f->val);
-        }
         
-        if(f->right)
-            q.push(f->right);
-    }
+    cout << root->val << " ";
 }
+void PrintRight(Node *root)
+{
+    if (root == NULL) 
+        return;
+    cout<<root->val<<" ";
 
-void outerTree(Node* root){
-    
+    PrintRight(root->right);
+    if(root->right == NULL && root->left) 
+        PrintRight(root->left);
 }
 
 int main()
 {
     Node* root = input_tree();
-    print_tree(root);
+    //print_tree(root);
+
+
+    PrintLeft(root->left);
+    cout << root->val << " ";
+    PrintRight(root->right);
+    
     return 0;
 }
