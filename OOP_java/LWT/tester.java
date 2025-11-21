@@ -70,15 +70,43 @@ public class tester {
         // c3.details();
 
 
-        Student s1 = new Student("Bob", 11);
-        Student s2 = new Student("Carol", 33);
+        // Student s1 = new Student("Bob", 11);
+        // Student s2 = new Student("Carol", 33);
 
-        Course c1 = new Course("CSE111", "Object Oriented Programming");
-        Course c2 = new Course("MAT120");
+        // Course c1 = new Course("CSE111", "Object Oriented Programming");
+        // Course c2 = new Course("MAT120");
+        // Course c3 = new Course("ET117", "Educational Technology");
+        // s1.addCourse(c1);
+        // s1.addCourse(c2);
+        // s1.addCourse(c3);
 
-        s1.addCourse(c1);
-        s1.addCourse(c2);
+        // s1.showDetails();
 
-        s1.showDetails();
+
+    
+
+    Student s1 = new Student("Bob", 11);
+    Student s2 = new Student("Carol", 33);
+    //s2 = new Student("KKKK", 45);
+
+    // s1.id = 89;
+
+    //s1.updateID(56);
+
+    s1.showDetails();
+
+    System.out.println("Total std: "+Student.count);
+
+
+    // Player sakib = new Player();
+    // Player tamim  = new Player();
+
+    // tamim.hit_four();
+    // tamim.hit_six();
+    // sakib.hit_four();
+
+    // System.out.println(sakib.teamRun);
+    // System.out.println(Player.teamRun);
+
     }
 }
