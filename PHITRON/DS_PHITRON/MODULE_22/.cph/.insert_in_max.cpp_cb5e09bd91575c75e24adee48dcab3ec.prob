@@ -1,0 +1,1 @@
+{"name":"Local: insert_in_max","url":"/Users/labib/Desktop/CodeVault/PHITRON/DS_PHITRON/MODULE_22/insert_in_max.cpp","tests":[{"id":1763752201629,"input":"10\n23 15 21 13 9 19 8 2 4 7\n18","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/labib/Desktop/CodeVault/PHITRON/DS_PHITRON/MODULE_22/insert_in_max.cpp","group":"local","local":true}

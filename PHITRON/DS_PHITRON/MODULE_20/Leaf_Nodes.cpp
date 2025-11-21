@@ -80,8 +80,7 @@ void leaf(Node* root){
     
 }
 
-int main()
-{
+int main(){
     Node* root = input_tree();
     leaf(root);
     return 0;
